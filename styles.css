@@ -1,0 +1,242 @@
+@font-face {
+  font-family: Geologica;
+  src: url("assets/fonts/geologica-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url('assets/fonts/ibm-plex-sans.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --keyColor: #f3501c;
+  --beige: #f1e5c1;
+  --black: #000;
+  --white: #fff;
+  /* C is one layout cell; only the hero has a 1.5C bottom field. */
+  --cell: 10vw;
+  --gutter: 1.125rem;
+  --footer-end: calc(var(--space) * 1.5);
+  --caption: 1.5625rem;
+  --space: var(--cell);
+  --space-end: calc(var(--cell) * 1.5);
+  --gap: 1.25rem;
+  --body: 1.125rem;
+  --heading: 2.875rem;
+  --small: clamp(0.875rem, 4.27vw, 1.125rem);
+  --button-font: 1.125rem;
+  --button-height: 3.3125rem;
+  --button-padding: 1.75rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; color: var(--black); background: var(--white); font-family: Geologica, Arial, sans-serif; font-synthesis: none; }
+h1, h2, h3, p, figure { margin: 0; }
+p, li, h2, h3 { overflow-wrap: anywhere; }
+p, h2, h3, figcaption { text-box-trim: trim-both; text-box-edge: cap alphabetic; }
+img { display: block; max-width: 100%; height: auto; }
+svg { display: block; }
+a { color: inherit; text-decoration-thickness: 0.3px; text-underline-offset: 0.22em; }
+a:focus-visible { outline: 3px solid var(--black); outline-offset: 5px; }
+h2 { font-size: var(--heading); line-height: 1; letter-spacing: -0.02em; }
+h3 { font-size: inherit; line-height: 1.2; }
+.page-width { max-width: 100rem; margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip-link { position: fixed; z-index: 2; top: 1rem; left: 1rem; padding: 1rem; color: var(--white); background: var(--black); clip-path: inset(50%); }
+.skip-link:focus { clip-path: none; outline-color: var(--white); }
+
+/* Caption-to-board distance is fixed; surrounding fields use C. */
+.hero { background: var(--keyColor); }
+.hero__inner { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.875rem var(--gap); padding: var(--space) var(--gutter) var(--space-end); }
+.hero__identity { display: flex; flex-direction: column; justify-content: space-between; align-items: start; gap: var(--cell); min-width: 0; }
+.hero__logo { width: 70.6%; height: auto; }
+.hero__tagline { font-weight: 700; font-size: var(--caption); line-height: 0.94; letter-spacing: -0.04em; }
+.hero__tagline span { display: block; }
+.hero__board { width: 100%; align-self: start; }
+
+.about { background: var(--beige); }
+.about__inner { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'photos' 'title' 'copy' 'action'; gap: 1.625rem var(--gap); padding: var(--space) var(--gutter); }
+.about__photos { grid-area: photos; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.about__photo-wrap { min-width: 0; aspect-ratio: 1.03; }
+.about__photo { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.about__photo-wrap--portrait .about__photo { object-position: right center; }
+.about h2 { grid-area: title; align-self: center; max-width: 18rem; line-height: 1.05; }
+.about__text { grid-area: copy; min-width: 0; font-size: var(--body); line-height: 1.2; }
+.about__text-column { display: contents; }
+.about__text p { margin-bottom: 0.7em; }
+.about__strategy-intro, .about__strategy-body { display: inline; }
+.about__text .about__welcome { margin-top: 0.7em; margin-bottom: 0; }
+.community-button { grid-area: action; display: inline-flex; align-items: center; justify-content: center; justify-self: start; min-width: 0; max-width: 100%; min-height: var(--button-height); padding: 1rem var(--button-padding) 1.125rem; border: 0; background: var(--keyColor); color: var(--beige); font-size: var(--button-font); font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; text-decoration: none; text-align: center; overflow-wrap: anywhere; }
+.community-button__label { text-box-trim: trim-both; text-box-edge: cap alphabetic; }
+.community-button--s { --button-font: 1.125rem; --button-height: 3.3125rem; --button-padding: 1.75rem; }
+.community-button--m { --button-font: 1.25rem; --button-height: 3.5625rem; --button-padding: 1.6875rem; }
+.community-button--l { --button-font: 1.6875rem; --button-height: 4.625rem; --button-padding: 1.75rem; }
+
+.rules__inner { padding: var(--space) var(--gutter); }
+.rules__header { display: grid; gap: 1.5rem; margin-bottom: 1.5rem; }
+.rules__header > p, .rule-block, .setup-list { font-size: var(--body); line-height: 1.2; }
+.rules__grid { display: grid; align-items: start; grid-template-columns: minmax(0, 1fr); gap: 1.75rem var(--gap); }
+.rules__column { display: grid; gap: 1.75rem; min-width: 0; }
+.rule-block { min-width: 0; }
+.rule-block h3 { margin-bottom: 0.6em; }
+.rule-copy { display: grid; gap: 0.7em; min-width: 0; }
+.rule-copy > * { min-width: 0; }
+.rule-copy strong { font-weight: 400; text-transform: uppercase; }
+.setup-list { display: grid; gap: 0.8em; padding-left: 1.4em; margin: 0; }
+.king-pair { display: flex; flex-direction: column; flex-wrap: wrap; gap: 1rem; margin-top: 0.75em; }
+.king-card { display: flex; flex: 0 0 auto; align-items: end; gap: 0.6em; min-width: 0; }
+.king-card img { width: clamp(2.5rem, 4.24vw, 3.8125rem); }
+.king-card figcaption { font-size: 0.78em; line-height: 1.1; }
+.king-card figcaption span { display: block; margin-top: 0.1em; }
+.deciding > p { margin-bottom: 1.5em; }
+.tosses { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 7.8125rem), 1fr)); gap: 1rem; align-items: start; }
+.toss-card img { width: min(100%, 10.625rem); aspect-ratio: 170 / 113; object-fit: contain; margin-bottom: 1.125rem; }
+.toss-card figcaption { line-height: 1.1; }
+
+/* One semantic family per original/promoted pair. Only the family's axis
+   changes on desktop, so no ordering tricks or duplicate artwork are needed. */
+.piece-guide__inner { container-type: inline-size; --movement-size: clamp(3.5rem, 17vw, 4.625rem); --piece-size: clamp(3rem, 15vw, 4rem); --piece-label: clamp(0.875rem, 4.27vw, 1.125rem); --piece-card-limit: 10.75rem; padding: 0 var(--gutter) var(--space); }
+.piece-guide__desktop { display: none; width: 100%; height: auto; overflow: visible; color: var(--keyColor); }
+.piece-guide h2, .advanced-rules h2 { font-size: var(--body); line-height: 1.2; letter-spacing: 0; }
+.piece-guide h2 { margin-bottom: 1.75rem; }
+.piece-guide__legend { display: flex; gap: var(--gap); font-size: var(--small); font-weight: 700; line-height: 1.1; margin-bottom: 1rem; }
+.piece-guide__legend > span { flex: 1 1 0; }
+.piece-guide__legend .piece-guide__sides { display: none; }
+.piece-guide__sides span { display: block; margin-top: 0.35em; }
+.piece-atlas { display: flex; flex-wrap: wrap; gap: 1.5rem var(--gap); margin: 0; padding: 0; list-style: none; }
+.piece-family { flex: 1 1 100%; min-width: 0; }
+.piece-family--fixed { margin-bottom: 1.5rem; }
+/* Match the two text columns (furigoma on phones, rules on tablets). */
+.piece-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.piece-pair--headings { margin-bottom: 0.5rem; }
+.piece-card { display: flex; flex: 1 1 0; max-width: var(--piece-card-limit); flex-wrap: wrap; justify-content: space-between; align-content: start; align-items: start; gap: 0.5rem; min-width: 0; }
+.piece-card__side-label { flex: 1 1 0; min-width: 0; max-width: var(--piece-card-limit); min-height: 1.8em; margin-bottom: 0.5rem; text-box-trim: trim-both; text-box-edge: cap alphabetic; font-size: var(--small); font-weight: 700; line-height: 1.1; color: var(--black); }
+.piece-card__identity { display: flex; flex-direction: column-reverse; align-items: start; flex: 0 0 var(--piece-size); min-width: 0; }
+.piece-card__names { width: max-content; max-width: calc((100cqi - var(--gap)) / 2); }
+.piece-card__piece { width: var(--piece-size); max-width: 100%; height: auto; aspect-ratio: 96 / 110; margin-bottom: 0.375rem; color: var(--black); }
+.piece-card--promoted, .piece-card--promoted .piece-card__piece { color: var(--keyColor); }
+.piece-card h3, .piece-card p { color: var(--black); font-size: var(--piece-label); line-height: 1.1; overflow-wrap: normal; }
+.piece-card p { font-size: calc(var(--piece-label) * 0.875); }
+.piece-card h3 { margin-bottom: 0.3em; }
+.movement-board { flex: 0 0 var(--movement-size); width: var(--movement-size); min-width: 3rem; aspect-ratio: 1; color: var(--keyColor); }
+.movement-board svg { width: 100%; height: 100%; overflow: visible; }
+/* Move the inner graphics by one square of their five-square movement maps. */
+.piece-card .movement-board { transform: translateX(-20%); }
+
+/* The promotion explanation and image stay together in one column;
+   the second column starts at 744px, not only on desktop. */
+.advanced-rules__inner { display: grid; grid-template-columns: minmax(0, 1fr); padding: 0 var(--gutter) var(--space); }
+.advanced-rules__flow { min-width: 0; font-size: var(--body); line-height: 1.2; }
+.advanced-rules__flow > * { margin-bottom: 1.25em; }
+.advanced-rules__flow > :last-child { margin-bottom: 0; }
+.advanced-rules h2 { margin-bottom: 0.6em; }
+.promotion__diagram-image { width: 100%; }
+.illegal-moves > p { margin-bottom: 0.7em; }
+.illegal-moves ul { display: grid; gap: 0.8em; margin: 0; padding-left: 1.4em; list-style: none; }
+
+.resources { background: var(--keyColor); }
+.resources__inner { padding: var(--space) var(--gutter) var(--footer-end); }
+.resources h2 { margin-bottom: 1.625rem; }
+.resource-links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.625rem var(--gap); padding: 0; margin: 0; list-style: none; }
+/* Trim the containing text block, not the decorated inline link (Safari). */
+.resource-links li { font-size: var(--body); line-height: 1.3; text-box-trim: trim-both; text-box-edge: cap alphabetic; }
+.resource-links a { color: var(--beige); }
+.social-links { display: flex; flex-wrap: wrap; gap: 0.625rem; margin-top: 3.5rem; }
+.social-link { display: block; width: 4rem; aspect-ratio: 1; color: var(--keyColor); background: var(--beige); }
+.social-link svg { width: 100%; height: 100%; }
+.discord-link svg { padding: 12.5%; }
+.credit { margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.2; }
+:lang(ja) { font-family: 'IBM Plex Sans', sans-serif; }
+
+/* Exact mobile side fields and footer bottom from the supplied rules. */
+@media (min-width: 20.0625rem) {
+  :root { --gutter: 1.25rem; }
+}
+
+/* Figma's portrait-tablet arrangement; interpolate between the 600/744 anchors. */
+@media (min-width: 37.5rem) {
+  :root { --body: 1.25rem; }
+  .hero__logo { width: 14.25rem; max-width: 100%; }
+  .about h2 { max-width: none; }
+  .piece-guide__inner { --movement-size: calc(6.944444vw + 2.020833rem); --piece-size: calc(5.555556vw + 1.916667rem); --piece-card-limit: 16.25rem; }
+  .piece-family--fixed { margin-bottom: 2.5rem; }
+  .piece-card__side-label { min-height: 0; margin-bottom: 0.875rem; }
+  .piece-card { align-items: end; flex-wrap: wrap; }
+  .piece-card__identity { display: contents; }
+  .piece-card__names { flex: 1 1 0; max-width: 6.25rem; }
+  .piece-card__piece { flex: 0 0 auto; margin-bottom: 0; }
+  .movement-board { flex-shrink: 0; }
+  .piece-card .movement-board { transform: none; }
+}
+
+/* The title and action fit side by side; copy becomes a two-column flow. */
+@media (min-width: 46.5rem) {
+  :root { --cell: min(5vw, 5rem); --gap: 1rem; }
+  .piece-guide__inner { --piece-card-limit: 20.5rem; }
+  .king-pair { flex-direction: row; }
+  .king-card { flex: 1 1 10rem; }
+  .hero__inner, .rules__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rules__header { gap: 2rem; margin-bottom: 2rem; }
+  .rules__column { gap: 2rem; }
+  .deciding > p { margin-bottom: 1.1em; }
+  /* The SVG is 665 × 700; its last 35 units are piece-name legends. */
+  .hero__identity { justify-content: space-between; gap: 2.75rem; padding-block-end: calc(100% * 35 / 665); }
+  .hero__logo { width: 60%; }
+  .about__inner { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'photos photos' 'title action' 'copy copy'; gap: 1.625rem var(--gap); }
+  .community-button { align-self: center; justify-self: end; }
+  .about__text { columns: 2; column-gap: var(--gap); column-fill: balance; }
+  .about__text p { display: block; margin-bottom: 0.8em; break-inside: avoid; }
+  .about__strategy-intro { break-before: column; }
+  .about__text .about__welcome { margin-top: 0; }
+  .advanced-rules__flow { columns: 2; column-gap: var(--gap); column-fill: balance; }
+  .advanced-rules__flow > * { break-inside: avoid; }
+  .resource-links { row-gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, auto); grid-auto-flow: column; }
+  .resources h2 { margin-bottom: 2rem; }
+}
+
+/* Desktop composition: wide photo, three copy columns, seven piece families. */
+@media (min-width: 64rem) {
+  :root { --gutter: calc(var(--cell) / 2); --heading: 3.125rem; --small: 0.875rem; --button-font: 1.25rem; --button-height: 3.5625rem; --button-padding: 1.6875rem; --gap: calc(var(--cell) / 2); }
+  .resources__inner { padding-bottom: calc(var(--gutter) * 1.02); }
+  .social-links { margin-top: var(--cell); }
+  .hero__identity { justify-content: space-between; }
+  .hero__logo { width: min(100%, calc(14.0625vw + 13.875rem)); }
+  .rules__header { gap: 2.75rem; margin-bottom: 3.5rem; }
+  .rules__column { gap: 3.625rem; }
+  .about__inner { row-gap: 2rem; }
+  /* Photo two starts at text column three; its gap stays 20px. */
+  .about__photos { grid-template-columns: minmax(0, 1fr) minmax(0, calc((100% - 2 * var(--gap)) / 3)); gap: 1.25rem; }
+  .about__photo-wrap { aspect-ratio: auto; }
+  .about__photo-wrap:first-child { aspect-ratio: 512 / 289; }
+  .about__text { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); columns: auto; }
+  .about__text-column { display: block; }
+  .about__text p { margin-bottom: 0.8em; }
+  .piece-guide h2 { margin-bottom: 2rem; }
+  .piece-guide__desktop { display: block; }
+  .piece-guide__legend, .piece-atlas { display: none; }
+  .deciding > p { margin-bottom: 1.5em; }
+  .promotion__diagram-image { width: 100%; }
+  .dropping { break-before: column; }
+  .resource-links { grid-template-columns: repeat(5, minmax(0, 1fr)); grid-template-rows: auto; grid-auto-flow: row; }
+}
+
+/* The large Figma type scale is a real design change, not another grid. */
+@media (min-width: 79.9375rem) {
+  :root { --body: 1.6875rem; --heading: 4.0625rem; --small: 1.125rem; --button-font: 1.6875rem; --button-height: 4.625rem; --button-padding: 1.75rem; --caption: 2rem; }
+  .hero__logo { width: min(100%, 33rem); }
+  .resources h2 { margin-bottom: 2.75rem; }
+  .toss-card img { width: min(100%, 13rem); aspect-ratio: 208 / 154; }
+  .social-link { width: 4.5rem; }
+}
+
+/* Touch browsers emulate sticky :hover after a tap; only real pointers hover. */
+@media (hover: hover) and (pointer: fine) {
+  a:hover:not(:focus) { color: var(--beige); }
+  .community-button:hover:not(:focus) { background: var(--black); }
+  .resource-links a:hover:not(:focus), .social-link:hover:not(:focus) { color: var(--black); }
+}
+.community-button:active { background: #151515; }

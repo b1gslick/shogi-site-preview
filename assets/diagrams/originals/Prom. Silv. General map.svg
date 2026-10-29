@@ -1,0 +1,28 @@
+<svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7" y="7" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="33" y="7" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="59" y="7" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="85" y="7" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="111" y="7" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="7" y="33" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="33" y="33" width="26" height="26" fill="#F1E5C1" stroke="#898989" stroke-width="0.5"/>
+<rect x="59" y="33" width="26" height="26" fill="#F1E5C1" stroke="#898989" stroke-width="0.5"/>
+<rect x="85" y="33" width="26" height="26" fill="#F1E5C1" stroke="#898989" stroke-width="0.5"/>
+<rect x="111" y="33" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="7" y="59" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="33" y="59" width="26" height="26" fill="#F1E5C1" stroke="#898989" stroke-width="0.5"/>
+<rect x="59" y="59" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<path d="M71.7483 65.428C71.2563 66.136 70.6263 66.868 69.8583 67.624C69.1023 68.368 68.2563 69.082 67.3203 69.766C66.3963 70.45 65.4303 71.056 64.4223 71.584C64.3623 71.452 64.2723 71.302 64.1523 71.134C64.0323 70.966 63.9003 70.804 63.7563 70.648C63.6243 70.48 63.4983 70.336 63.3783 70.216C64.4103 69.7 65.4063 69.082 66.3663 68.362C67.3263 67.642 68.1903 66.88 68.9583 66.076C69.7263 65.272 70.3383 64.504 70.7943 63.772H72.5403C73.0203 64.432 73.5603 65.074 74.1603 65.698C74.7723 66.31 75.4143 66.886 76.0863 67.426C76.7703 67.966 77.4723 68.458 78.1923 68.902C78.9123 69.334 79.6263 69.7 80.3343 70C80.1303 70.204 79.9263 70.444 79.7223 70.72C79.5303 70.996 79.3623 71.26 79.2183 71.512C78.5223 71.152 77.8203 70.738 77.1123 70.27C76.4043 69.802 75.7143 69.298 75.0423 68.758C74.3823 68.218 73.7703 67.666 73.2063 67.102C72.6423 66.538 72.1563 65.98 71.7483 65.428ZM67.2843 69.244H76.3203V70.756H67.2843V69.244ZM65.0163 72.898H78.5703V74.374H65.0163V72.898ZM64.1523 78.478H79.5063V79.972H64.1523V78.478ZM70.8303 69.838H72.6303V79.234H70.8303V69.838ZM66.3483 75.202L67.7343 74.644C67.9743 74.956 68.2083 75.298 68.4363 75.67C68.6643 76.042 68.8683 76.414 69.0483 76.786C69.2283 77.146 69.3543 77.476 69.4263 77.776L67.9683 78.424C67.8963 78.124 67.7763 77.788 67.6083 77.416C67.4403 77.044 67.2483 76.666 67.0323 76.282C66.8163 75.886 66.5883 75.526 66.3483 75.202ZM75.6543 74.626L77.2743 75.238C76.9263 75.802 76.5543 76.372 76.1583 76.948C75.7743 77.524 75.4203 78.016 75.0963 78.424L73.8003 77.866C74.0163 77.578 74.2383 77.248 74.4663 76.876C74.6943 76.492 74.9103 76.102 75.1143 75.706C75.3303 75.31 75.5103 74.95 75.6543 74.626Z" fill="#E8503E"/>
+<rect x="85" y="59" width="26" height="26" fill="#F1E5C1" stroke="#898989" stroke-width="0.5"/>
+<rect x="111" y="59" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="7" y="85" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="33" y="85" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="59" y="85" width="26" height="26" fill="#F1E5C1" stroke="#898989" stroke-width="0.5"/>
+<rect x="85" y="85" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="111" y="85" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="7" y="111" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="33" y="111" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="59" y="111" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="85" y="111" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+<rect x="111" y="111" width="26" height="26" fill="white" stroke="#898989" stroke-width="0.5"/>
+</svg>
